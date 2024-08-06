@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { db, storage } from '../../firebase/firebaseConfig'; // Import the db and storage from your firebase.js
+import { db, storage } from '../../firebase/firebaseConfig'; 
 import { collection, addDoc } from "firebase/firestore"; 
 import { ref, uploadBytes, getDownloadURL } from "firebase/storage";
 import Footer from "./Footer";

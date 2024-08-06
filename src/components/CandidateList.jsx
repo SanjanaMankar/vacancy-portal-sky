@@ -2,14 +2,14 @@ import React, { useEffect, useState } from "react";
 import { MdDeleteForever } from "react-icons/md";
 import { FaUserEdit } from "react-icons/fa";
 import { BiShowAlt } from "react-icons/bi";
-import { db } from "../../firebase/firebaseConfig"; // Import Firestore
-import { collection, getDocs } from "firebase/firestore"; // Import Firestore functions
+import { db } from "../../firebase/firebaseConfig"; 
+import { collection, getDocs } from "firebase/firestore"; 
 import Footer from "./Footer";
 
 const CandidateList = () => {
   const [candidates, setCandidates] = useState([]);
 
-  // Fetch data from Firestore on component mount
+  
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -36,8 +36,8 @@ const CandidateList = () => {
                 <th className="px-6 py-3 text-left text-sm font-medium text-green-50 uppercase tracking-wider">Email</th>
                 <th className="px-6 py-3 text-left text-sm font-medium text-green-50 uppercase tracking-wider">Job Location</th>
                 <th className="px-6 py-3 text-left text-sm font-medium text-green-50 uppercase tracking-wider">Salary Exp.</th>
-                <th className="px-6 py-3 text-left text-sm font-medium text-green-50 uppercase tracking-wider">Download CV</th>
-                <th className="px-6 py-3 text-left text-sm font-medium text-green-50 uppercase tracking-wider">Modify</th>
+                <th className="px-6 py-3 text-left text-sm font-medium text-green-50 uppercase tracking-wider">Resume</th>
+                <th className="px-6 py-3 text-left text-sm font-medium text-green-50 uppercase tracking-wider">Actions</th>
               </tr>
             </thead>
             <tbody className="bg-green-50 divide-y divide-gray-200">
@@ -52,9 +52,9 @@ const CandidateList = () => {
                     <a target="_blank" href={candidate.cv} download={`${candidate.firstName}-${candidate.lastName}-Resume.pdf`}>View</a>
                   </td>
                   <td className="px-6 py-4 whitespace-nowrap font-medium text-green-600 cursor-pointer flex text-xl">
-                    <FaUserEdit className="hover:text-indigo-900" />&nbsp;&nbsp;
-                    <MdDeleteForever className="hover:text-indigo-900" />&nbsp;&nbsp;
-                    <BiShowAlt className="hover:text-indigo-900" />
+                    <FaUserEdit className="text-yellow-500 hover:text-indigo-900" />&nbsp;&nbsp;
+                    <MdDeleteForever className="text-red-700 hover:text-indigo-900" />&nbsp;&nbsp;
+                    {/* <BiShowAlt className="hover:text-indigo-900" /> */}
                   </td>
                 </tr>
               ))}
