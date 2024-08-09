@@ -2,15 +2,15 @@ import React, { useEffect, useState } from "react";
 import { MdDeleteForever } from "react-icons/md";
 import { FaUserEdit } from "react-icons/fa";
 import { BiShowAlt } from "react-icons/bi";
-import { db } from "../../firebase/firebaseConfig"; // Import Firestore
-import { collection, getDocs } from "firebase/firestore"; // Import Firestore functions
+import { db } from "../../firebase/firebaseConfig"; 
+import { collection, getDocs } from "firebase/firestore"; 
 import Footer from "./Footer";
 import Bgimage from '../assets/common/bg-img.png';
 
 const CandidateList = () => {
   const [candidates, setCandidates] = useState([]);
 
-  // Fetch data from Firestore on component mount
+  
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -38,8 +38,8 @@ const CandidateList = () => {
                 <th className="px-6 py-3 text-left text-sm font-medium text-green-50 uppercase tracking-wider">Email</th>
                 <th className="px-6 py-3 text-left text-sm font-medium text-green-50 uppercase tracking-wider">Job Location</th>
                 <th className="px-6 py-3 text-left text-sm font-medium text-green-50 uppercase tracking-wider">Salary Exp.</th>
-                <th className="px-6 py-3 text-left text-sm font-medium text-green-50 uppercase tracking-wider">Download CV</th>
-                <th className="px-6 py-3 text-left text-sm font-medium text-green-50 uppercase tracking-wider">Modify</th>
+                <th className="px-6 py-3 text-left text-sm font-medium text-green-50 uppercase tracking-wider">Resume</th>
+                <th className="px-6 py-3 text-left text-sm font-medium text-green-50 uppercase tracking-wider">Actions</th>
               </tr>
             </thead>
             <tbody className="bg-[#6B8A7A] divide-y divide-[#B7B597]">

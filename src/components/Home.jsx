@@ -10,6 +10,7 @@ import { IoLocation } from "react-icons/io5";
 import { MdContactMail, MdContactPhone } from "react-icons/md";
 import { CiEdit } from "react-icons/ci";
 import { TiDelete } from "react-icons/ti";
+import GuitarString from './GuitarString';
 
 const SearchBar = ({ value, onChange }) => (
   <div className="relative mt-4">
@@ -87,7 +88,7 @@ const Home = () => {
   }, []);
 
   const filteredVacancies = vacancies.filter(vacancy =>
-    vacancy.jobDescription.toLowerCase().includes(searchTerm.toLowerCase())
+    vacancy.designation.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
   const handleEdit = (vacancy) => {
@@ -106,8 +107,10 @@ const Home = () => {
   return (
     <>
       <div className="container py-12 bg-cover bg-no-repeat bg-center max-w-full min-h-screen flex flex-col items-center" style={{ backgroundImage: `url(${Bgimage})` }}>
+       
         <SearchBar value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} />
         <div className="flex flex-col items-center mt-8">
+        <GuitarString/>
           <span className="sticky top-0  px-2 py-1 text-2xl font-bold text-black rounded-full ">
             New Vacancies
           </span>
@@ -122,7 +125,9 @@ const Home = () => {
             ))}
           </div>
         </div>
+        
       </div>
+      
       <Footer />
     </>
   );
