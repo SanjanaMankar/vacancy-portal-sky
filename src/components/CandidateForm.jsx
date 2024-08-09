@@ -22,7 +22,7 @@ const CandidateForm = () => {
     const [fileName, setFileName] = useState('');
     const [imagePreviewURL, setImagePreviewURL] = useState(null);
 
-    const navigate = useNavigate();
+    const navigate = useNavigate(); 
 
     const handleImageChange = (e) => {
         const file = e.target.files[0];
