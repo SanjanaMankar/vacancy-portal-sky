@@ -30,7 +30,7 @@ export default function Navbar() {
                 <XMarkIcon aria-hidden="true" className="hidden h-6 w-6 group-data-[open]:block" />
               </DisclosureButton>
             </div>
-            <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-between">
+            <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-between  font-bold">
               <div className="flex flex-shrink-0 items-center bg-[#0f271c] rounded-xl p-1" >
                 <img
                   alt="Your Company"
@@ -45,10 +45,10 @@ export default function Navbar() {
                         key={item.name}
                         to={item.to}
                         className={classNames(
-                          item.current ? 'hover:bg-[#6B8A7A] hover:text-black text-[#254336]' : 'text-[#254336] hover:text-black hover:bg-[#6B8A7A]',
-                          'block rounded-md px-3 py-2 text-base font-medium',
-                          item.name === 'Login' ? 'bg-green-300 hover:bg-green-500 text-green-950 hover:text-green-950' : '',
-                          'block rounded-md px-3 py-2 text-base font-medium',
+                          item.current ? 'hover:bg-[#6B8A7A] hover:text-black text-[#254336]' : 'text-[#254336]  hover:text-black hover:bg-[#6B8A7A] font-extrabold',
+                          'block rounded-md px-3 py-2 ',
+                          item.name === 'Login' ? 'bg-green-300 hover:bg-green-500 text-green-950 hover:text-green-950 font-extrabold ' : '',
+                          'block rounded-md px-3 py-2 ',
                         )}
                       >
                         {item.name}
@@ -67,10 +67,10 @@ export default function Navbar() {
                 as="a"
                 to={item.to}
                 className={classNames(
-                  item.current ? 'hover:bg-green-300 text-green-100 hover:text-green-950' : 'text-green-100 hover:bg-green-300 hover:text-green-950',
-                  'block rounded-md px-3 py-2 text-base font-medium',
+                  item.current ? 'hover:bg-green-300 text-green-100 hover:text-green-950 font-extrabold' : 'text-green-100 hover:bg-green-300 hover:text-green-950 ',
+                  'block rounded-md px-3 py-2 ',
                   item.name === 'Login' ? 'bg-green-300 hover:bg-green-500 text-green-950 hover:text-green-950' : '',
-                  'block rounded-md px-3 py-2 text-base font-medium',
+                  'block rounded-md px-3 py-2',
                 )}
               >
                 {item.name}
